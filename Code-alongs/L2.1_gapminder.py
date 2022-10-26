@@ -18,4 +18,4 @@ fig = px.scatter(
 
 fig.show() # körs härifrån så öppnas grafen automatiskt i en webläsare då kör plotlyexpress
 
-fig.write_html("2.2_gapminder.html", auto_open = True)
+fig.write_html("2.2_gapminder.html", auto_open = True) #sparar ovanstående i en fil
