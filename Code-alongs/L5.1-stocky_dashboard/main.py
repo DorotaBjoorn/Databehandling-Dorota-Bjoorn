@@ -74,7 +74,7 @@ app.layout = html.Main(                         #children ex H1, P, Dropdown etc
             id="time-slider", min=0, max=6, marks=slider_marks, value=2, step=None
         ),
         # storing intermediate value on clinets browser in ordre to share between several callbacks
-        dcc.Store(id="filtered-dfy7u7"),
+        dcc.Store(id="filtered-df"),
     ]
 )
 
