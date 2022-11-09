@@ -16,12 +16,14 @@ class StockData:
             # example:
             # data_folder_path: C:\Users\DorotaBjöörn-AI22GBG\Documents\GitHub\Databehandling-Dorota-Bjoorn\Code-alongs\stockdata
             # stockname: AAPL,
-            # resulting path: C:\Users\DorotaBjöörn-AI22GBG\Documents\GitHub\Databehandling-Dorota-Bjoorn\Code-alongs\stockdata\AAPL_TIME_SERIES_DAYILY_ADJUSTED.csv
+            # path_ending: _TIME_SERIES_DAILY_ADJUSTED.csv,
+            # resulting path: C:\Users\DorotaBjöörn-AI22GBG\Documents\GitHub\Databehandling-Dorota-Bjoorn\
+            #                   Code-alongs\stockdata\AAPL_TIME_SERIES_DAYILY_ADJUSTED.csv
             path = os.path.join(self._data_folder_path, stockname+path_ending)
 
-            stock = pd.read_csv(path, index_col=0, parse_dates=True)
+            stock = pd.read_csv(path, index_col=0, parse_dates=True) #datumen blir index, pd.datetime för inläsning av datum
             stock.index.rename("Date", inplace=True)
 
             stock_df_list.append(stock)
 
-        return stock_df_list
+        return stock_df_list #containging 2 st DFs
