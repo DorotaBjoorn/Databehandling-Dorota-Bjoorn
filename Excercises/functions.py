@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def plot_nan_colls(df):
     nan_columns = df.columns[df.isna().any()].to_list()
     sum_nuns = df.isna().sum().to_list()
